@@ -6,6 +6,7 @@ import {
   Route
 } from "react-router-dom";
 import Header from './Pages/Shared/Header/Header';
+import Home from './Home/Home/Home';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <BrowserRouter>
           <Header/>
           <Routes>
-            <Route></Route>
+            <Route path="/" element={<Home/>}/>
           </Routes>
         </BrowserRouter>
     </div>

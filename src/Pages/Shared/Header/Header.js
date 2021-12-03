@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -10,32 +11,33 @@ const Header = () => {
     // });
 
     return (
-        <div>
+        <div className="sticky">
             <nav className=" shadow">
-            <div className=" max-w-6xl mx-auto">
-              <div className="flex justify-between px-2">
+            <div className="px-10 mx-auto">
+              <div className="flex justify-between px-4">
                     <div className="flex space-x-4">
                         {/* logo */}
                         <div >
-                            <a href="#" className="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
-                                <svg className="h-8 w-8 mr-2 text-blue-500" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
-                                </svg>
-                                <button>Better Dev</button>
-                            </a>
+                            <Link to="/home"  className="flex items-center py-4 px-3 text-gray-700 hover:text-gray-900">
+                                <button className="border border-gray-400 p-2 font-extrabold text-3xl">H.</button>
+                                <span className="text-2xl font-bold text-gray-500">Hamed Hussain</span>
+                            </Link>
                         </div>
                         {/* primary nav */}
-                        <div className="hidden md:flex items-center space-x-1">
+                        {/* <div className="hidden md:flex items-center space-x-1">
                             <a href="#" className="py-5 px-3 text-gray-700">Resume</a>
                             <a href="#"  className="py-5 px-3 text-gray-700">Portfolio</a>
 
-                        </div>
+                        </div> */}
                     </div>
                         
                         {/* secondary nav */}
                         <div  className="hidden md:flex items-center space-x-1">
-                            <a href="#"  className="py-5 px-3 text-gray-700 hover:text-red-900">Login</a> 
-                            <a href="#" className="py-2 px-3 text-gray-700 bg-blue-400 rounded hover:bg-blue-900 hover:text-white">Signup</a>
+                        <Link to="/home" className="py-4 px-3 text-blue-400 font-bold">Home</Link>
+                            <Link to="/about"  className="py-5 px-3 text-gray-600">My Intro</Link>
+                            <Link to="/resume"   className="py-5 px-3 text-gray-600 hover:text-red-900">Resume</Link> 
+                            <Link to="/portfolio"  className="py-2 px-3 text-gray-600" >Portfolio</Link>
+                            <Link to="/testimonial"  className="py-2 px-3 text-gray-600">Testimonial</Link>
                            
                         </div>
 
@@ -49,23 +51,15 @@ const Header = () => {
                        </div>
                        
            
-                        </div>
+                </div>
                             {/* mobile menu */}
                             <div className="mobile-menu hidden md:hidden">
-                                <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-400">Resume</a>
-                                <a href="#"  className="block py-2 px-4 text-sm">Portfolio</a>
+                                <Link to="/"  className="block py-2 px-4 text-sm hover:bg-gray-400">Resume</Link>
+                                <Link to="/"  className="block py-2 px-4 text-sm">Portfolio</Link>
                             </div>
                         </div>
 
-        </nav>
-      
-
-    
-
-                        <div className="py-50 text-center">
-                            <h2 className="text-4xl font-bold uppercase text-blue-500">Hamed Hussaon</h2>
-                            <h2 className="text-xl font-base text-blue-900">Junior Web Developer</h2>
-                        </div>
+                </nav>
 
         </div>
 
