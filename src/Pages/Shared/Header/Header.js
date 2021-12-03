@@ -33,7 +33,7 @@ const Header = () => {
                         
                         {/* secondary nav */}
                         <div  className="hidden md:flex items-center space-x-1">
-                        <Link to="/home" className="py-4 px-3 text-blue-400 font-bold">Home</Link>
+                        <Link to="/" className="py-4 px-3 text-blue-400 font-bold">Home</Link>
                             <Link to="/about"  className="py-5 px-3 text-gray-600">My Intro</Link>
                             <Link to="/resume"   className="py-5 px-3 text-gray-600 hover:text-red-900">Resume</Link> 
                             <Link to="/portfolio"  className="py-2 px-3 text-gray-600" >Portfolio</Link>
